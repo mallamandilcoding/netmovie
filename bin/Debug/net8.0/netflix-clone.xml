@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>netflix-clone</name>
+    </assembly>
+    <members>
+        <member name="T:netflix_clone.Migrations.CreateUserTable">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.CreateUserTable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.CreateUserTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.CreateUserTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:netflix_clone.Migrations.UserTableUpdateRelation">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.UserTableUpdateRelation.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.UserTableUpdateRelation.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.UserTableUpdateRelation.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:netflix_clone.Migrations.DatabaseTables">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.DatabaseTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.DatabaseTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.DatabaseTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

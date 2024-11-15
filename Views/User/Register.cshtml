@@ -1,0 +1,63 @@
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_login-signup.cshtml"; 
+}
+<div class="login-signup-div">
+    <h2>Sign In</h2>
+    <form method="">
+        <div class="mb-3">
+            
+            <input type="email" class="form-control" id="email1" aria-describedby="email" placeholder="EMAIL" name="Email">
+            @* <label for="email">Email</label> *@
+        </div>
+        <div class="mb-3">
+            
+            <input type="password" class="form-control" id="password" placeholder="PASSWORD" name="Password">
+            @* <label for="password">Password</label> *@
+        </div>
+        
+        <div class="mb-3">
+            
+            <input type="confirmpassword" class="form-control" id="confirmpassword" placeholder="CONFIRM PASSWORD" name="ConfirmPassword">
+            @* <label for="password">Password</label> *@
+        </div>
+        <select class="form-select mb-3" aria-label="Default select example" id="subscriptiontype" name="SubscriptionType">
+            <option selected>!--Select Your Plan--!</option>
+            <option value="1">Basic</option>
+            <option value="2">Standard</option>
+            <option value="3">Premium</option>
+        </select>
+
+        <div class="subscription-period-div mb-3">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                    1 month
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    3 month
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    6 month
+                </label>
+            </div>
+        </div>
+        <div class="mb-3">
+            
+            <input type="email" class="form-control" id="cardnumber" aria-describedby="cardnumber" placeholder="CARD NUMBER">
+            @* <label for="email">Email</label> *@
+        </div>
+
+        <button type="submit" class="btn w-100 login-signup-button">Register</button>
+        
+
+        
+    </form>
+    
+</div>

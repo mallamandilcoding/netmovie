@@ -1,0 +1,343 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "User Registration API",
+    "version": "1.0.0",
+    "description": "API for managing users, subscriptions, and payment methods."
+  },
+  "paths": {
+    "/api/user/register": {
+      "post": {
+        "summary": "Register a new user",
+        "description": "Allows a new user to create an account.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "user@example.com",
+                    "description": "User's email address"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "password123",
+                    "description": "User's password"
+                  },
+                  "confirmPassword": {
+                    "type": "string",
+                    "example": "password123",
+                    "description": "Confirmation of user's password"
+                  },
+                  "subscriptiontype": {
+                    "type": "string",
+                    "example": "premium",
+                    "description": "Subscription plan (e.g., 'basic','standard', 'premium')"
+                  },
+                  "subscriptionPeriod": {
+                    "type": "string",
+                    "example": "3 months",
+                    "description": "Duration of the subscription (e.g., '1 month', '12 months')"
+                  },
+                  "cardNumber": {
+                    "type": "string",
+                    "example": "1234-5678-9101-1121",
+                    "description": "Credit card number for payment"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password",
+                  "confirmPassword",
+                  "plan",
+                  "subscriptionPeriod",
+                  "cardNumber"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User successfully registered",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "User registered successfully."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request body"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/user/login": {
+      "post": {
+        "summary": "User login",
+        "description": "Allows a user to log in using their email and password.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "user@example.com",
+                    "description": "User's email address"
+                  },
+                  "password": {
+                    "type": "string",
+                    "example": "password123",
+                    "description": "User's password"
+                  }
+                },
+                "required": [
+                  "email",
+                  "password"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User successfully logged in",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "Login successful."
+                    },
+                    "token": {
+                      "type": "string",
+                      "example": "jwt_token_here"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid email or password"
+          },
+          "401": {
+            "description": "Unauthorized - user not found or incorrect credentials"
+          }
+        }
+      }
+    },
+    "/api/users": {
+      "get": {
+        "summary": "Get all users",
+        "description": "Retrieve a list of all users in the system",
+        "responses": {
+          "200": {
+            "description": "List of all users",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "example": 1
+                      },
+                      "email": {
+                        "type": "string",
+                        "example": "user@example.com"
+                      },
+                      "plan": {
+                        "type": "string",
+                        "example": "basic"
+                      },
+                      "subscriptionPeriod": {
+                        "type": "string",
+                        "example": "1 month"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Users not found"
+          }
+        }
+      }
+    },
+    "/api/user/{id}": {
+      "get": {
+        "summary": "Get a single user",
+        "description": "Retrieve the details of a single user by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the user to retrieve",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Details of a single user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "user@example.com"
+                    },
+                    "plan": {
+                      "type": "string",
+                      "example": "basic"
+                    },
+                    "subscriptionPeriod": {
+                      "type": "string",
+                      "example": "monthly"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a user",
+        "description": "Delete a user by their ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the user to delete",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "User deleted successfully"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Partially update a user",
+        "description": "Update some fields of the user by ID (partial update)",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the user to update",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  },
+                  "plan": {
+                    "type": "string"
+                  },
+                  "subscriptionPeriod": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 1
+                    },
+                    "email": {
+                      "type": "string",
+                      "example": "newuser@example.com"
+                    },
+                    "plan": {
+                      "type": "string",
+                      "example": "basic"
+                    },
+                    "subscriptionPeriod": {
+                      "type": "string",
+                      "example": "monthly"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "404": {
+            "description": "User not found"
+          }
+        }
+      }
+    }
+  }
+}

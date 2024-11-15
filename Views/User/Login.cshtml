@@ -1,0 +1,36 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_login-signup.cshtml"; 
+}
+<div class="login-signup-div">
+    <h2>Sign In</h2>
+    <form method="">
+        <div class="mb-3">
+            
+            <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="EMAIL" name="Email">
+            @* <label for="email">Email</label> *@
+        </div>
+        <div class="mb-3">
+            
+            <input type="password" class="form-control" id="password" placeholder="PASSWORD" name="Password">
+            @* <label for="password">Password</label> *@
+        </div>
+        
+        
+        <button type="submit" class="btn w-100 login-signup-button">Sign In</button>
+        <div class="text-center forget-password-div">
+            
+            <a href="#">Forget Password?</a>
+        </div>
+
+        <div class="mt-3 form-check">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+        </div>
+    </form>
+    <div class="signup-now-div mt-3">
+        <span>New to Netflix?</span>
+        <a href="#">Sign up now</a>
+        
+    </div>
+</div>

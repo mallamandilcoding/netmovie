@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.poster-background{
+
+    background-image: url("../images/poster-background.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+/* Add the blackish overlay */
+.poster-background::after {
+    content: ''; /* Necessary to create a pseudo-element */
+    position: absolute; /* Position it on top of the image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Black overlay with 50% opacity */
+    z-index: 1; /* Place overlay on top */
+}
+
+.poster-background > * {
+    position: relative; /* Make sure text/content stays above the overlay */
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo{
+    color: #e50a15;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.login-signup-div{
+    width: 35%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.login-signup-div h2{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-signup-div input{
+    background-color: #333333;
+    /* color: #efeaea!important; */
+    border: black;
+    /* width: 100%; */
+}
+
+
+
+.login-signup-div input::placeholder{
+    color:#8c8c8c;
+}
+
+.login-signup-div .login-signup-button{
+    background-color: #e50a15;
+    color: white;
+}
+
+.login-signup-div .forget-password-div {
+    margin-top: 5px;
+}
+
+.login-signup-div .forget-password-div a{
+    color: #B3B3B3;
+    text-decoration: none;
+}
+
+.login-signup-div .form-check{
+    color:#B3B3B3 ;
+}
+
+.login-signup-div .signup-now-div span{
+    color:#B3B3B3 ;
+}
+
+.login-signup-div .signup-now-div a{
+    color: white;
+}
+
+.login-signup-div .form-check-input:checked {
+    background-color: #e50a15; /* Change to your desired color */
+    border-color: #52534c; /* Change border color when selected */
+}
+
+.login-signup-div .form-select {
+    background-color: #333333; /* Blue background */
+    color: #B3B3B3 ;  /* White text */
+    border-color: #333333; /* Border matching the background */
+}
+
+.login-signup-div .form-select:focus {
+    border-color: #333333; /* Darker border color on focus */
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25); 
+}
+
+.login-signup-div input:not(:focus){
+    color: #efeaea;
+}
+
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #737373;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer-links-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links-column a{
+    color: #737373;
+}
+
+.footer .container > div{
+    padding-top: 25px;
+}
+
+.footer .container > div:last-child{
+    padding-bottom: 15px;
+}
+

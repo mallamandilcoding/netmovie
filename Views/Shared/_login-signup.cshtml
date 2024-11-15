@@ -1,0 +1,61 @@
+@{
+    Layout = null;  // Disables the layout for this page
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css">
+
+</head>
+<body>
+   <div class="poster-background">
+        <div class="container">
+            <div class="main">
+                <div class="logo">
+                    NetMovie
+                </div>
+                <div class="content-change">
+                     @RenderBody()
+                </div>
+                
+
+            </div>
+            
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div>Questions?contact us.</div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <a href="#">FAQ</a>
+                        <a href="#">Cookie Preferences</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <a href="#">Help Center</a>
+                        <a href="#">Cookie Preferences</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <a href="#">Netflix Shop</a>
+                        <a href="#">Corporate Information</a>
+                    </div>
+                    <div class="footer-links-column">
+                        <a href="#">Terms of Use</a>
+                        <a href="#">Commercial Transcation</a>
+                    </div>
+                </div>
+                <div class="language">
+                    English
+                </div>
+            </div>
+                
+        </div>
+   </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
