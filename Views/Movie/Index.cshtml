@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "movies";
+    Layout = "~/Views/Shared/_MovieNavigationbar.cshtml";
+}
+@model IEnumerable<netflix_clone.Models.Movie>
+<div class="video-container">
+    <video autoplay muted loop>
+        <source src="~/videos/dark.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h2>Snow</h2>
+        <div class="detail-info mt-3">
+            <button class="info-play me-2"><i class="fa-solid fa-play me-1 "></i>play</button>
+            <button class="info-more"><i class="fa-solid fa-circle-info me-1"></i>more info</button>
+        </div>
+    </div>
+</div>
+<div class="movielist">
+    @foreach (var movie in Model)
+    {
+        <div class="movie-card">
+            <!-- Dynamic link and image -->
+            <a href="@Url.Action("Details", "Movie", new { id = movie.Id })">
+                <img src="@movie.ImageUrl" alt="@movie.Title" />
+            </a>
+            @* <h3>@movie.Title</h3> *@
+        </div>
+    }
+
+</div>

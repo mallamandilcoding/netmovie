@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_MovieNavigationbar.cshtml";
+}
+@model netflix_clone.Models.Movie;
+<div class="image-container">
+    <img class="img-poster" src="@Model.ImageUrl" alt="@Model.Title">
+    <div class="content">
+        <h2 class="text-center">@Model.Title</h2>
+        <div class="detail-info mt-3">
+            <a href="@Url.Action("PlayVideo", "Movie", new { videourl = @Model.VideoUrl })"><i
+                    class="fa-solid fa-circle-play fa-7x"></i></a>
+        </div>
+    </div>
+</div>
+<div class="moviedetails">
+    <h1 class="text-uppercase mb-0">@Model.Title</h1>
+    <p class="text-capitalize small mb-0">
+        @Model.Genre.GenreName / @Model.Language / @Model.ReleaseDate.ToString("yyyy") / @Model.Duration H
+    </p>
+    <p class="text-capitalize small">
+        <span>Director : @Model.Director / Cast : @Model.Cast </span>
+        <span></span>
+    </p>
+    <p class="mt-3">@Model.Description</p>
+    <div class="list-like">
+        <a href="#" class="me-3 list"><i class="fa-solid fa-circle-plus me-1"></i>My List</a>
+        <a href="#" class="me-2 like"><i class="fa-solid fa-thumbs-up"></i></a>
+        <a href="#" class="like"><i class="fa-solid fa-thumbs-down"></i></a>
+    </div>
+</div>

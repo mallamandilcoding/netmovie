@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Video Player";
+}
+
+<!-- Include Video.js CSS and JS -->
+
+<head>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
+</head>
+
+<body>
+    <h2>@ViewData["Title"]</h2>
+
+    <!-- Video.js Player -->
+    <video id="video-player" class="video-js vjs-default-skin" controls>
+        <!-- Dynamically set the video source based on the controller parameter -->
+        <source src="@Url.Action("Stream", "Video", new { videoName = ViewData["VideoName"] })" type="video/mp4">
+    </video>
+
+    <script>
+        // Initialize the Video.js player
+        var player = videojs('video-player', {
+            techOrder: ['html5']
+        });
+    </script>
+</body>

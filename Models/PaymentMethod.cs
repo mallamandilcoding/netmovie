@@ -10,7 +10,7 @@ namespace netflix_clone.Models
         public int PaymentMethodId { get; set; }
         public int UserId { get; set; }  // Foreign Key to User
         public string CardNumber { get; set; }
-        public DateTime ExpirationDate { get; set; }
+        // public DateTime ExpirationDate { get; set; }
 
         // Navigation Property (many-to-one relationship with User)
         public User User { get; set; }

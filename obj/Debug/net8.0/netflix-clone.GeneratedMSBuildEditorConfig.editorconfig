@@ -26,12 +26,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/apple/netflix-clone/Views/Movie/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/apple/netflix-clone/Views/Movie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/apple/netflix-clone/Views/Movie/PlayVideo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvUGxheVZpZGVvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/apple/netflix-clone/Views/Movie/Stream.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvU3RyZWFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/apple/netflix-clone/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/apple/netflix-clone/Views/Shared/_login-signup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19sb2dpbi1zaWdudXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/apple/netflix-clone/Views/Shared/_MovieNavigationbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Nb3ZpZU5hdmlnYXRpb25iYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/apple/netflix-clone/Views/Shared/_ValidationScriptsPartial.cshtml]

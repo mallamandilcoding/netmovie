@@ -2,9 +2,8 @@ namespace netflix_clone.Models
 {
     public class User
     {
-        public int Id { get; set; }                
-        public string Name { get; set; }       
-        public string Email { get; set; }          
+        public int Id { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }       // Password (hashed)
         public DateTime DateJoined { get; set; }   // Date user joined
 
@@ -17,6 +16,6 @@ namespace netflix_clone.Models
         // One-to-one relationship with Subscription
         public Subscription Subscription { get; set; }
 
-        
+
     }
 }

@@ -7,19 +7,26 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Add Swagger services
-// builder.Services.AddSwaggerGen(c =>
-// {
-//     c.SwaggerDoc("v1", new OpenApiInfo
-//     {
-//         Title = "My MVC Application API",
-//         Version = "v1",
-//         Description = "This is a simple example of Swagger integration in ASP.NET Core MVC.",
-//     });
-//     var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
-//     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-//     c.IncludeXmlComments(xmlPath);
-// });
+// Add session services
+builder.Services.AddDistributedMemoryCache();  // Use memory cache for session data
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);  // Set session timeout
+    options.Cookie.HttpOnly = true;                  // Make the session cookie HTTP-only
+    options.Cookie.IsEssential = true;               // Mark the cookie as essential
+});
+
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5034")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 // Register the DbContext with the PostgreSQL connection string
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -31,22 +38,19 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
-    
-    
-    // app.UseSwagger(); // Generates the Swagger specification
-    // app.UseSwaggerUI(options =>
-    // {
-    //     // Point to the swagger.json located in wwwroot/swagger
-    //     options.SwaggerEndpoint("/swagger/swagger.json", "My API v1");
-    //     options.RoutePrefix = string.Empty; // Optional: set Swagger UI as the root page
-    //     options.RoutePrefix = "swagger"; // Optional: set Swagger UI as the root page
-    // });
+
 }
 else
 {
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
+
+// Enable CORS for the application
+app.UseCors("AllowAllOrigins");
+
+// Enable session middleware
+app.UseSession();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

@@ -69,6 +69,10 @@ namespace netflix_clone.Migrations
                     b.Property<int>("GenreId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Language")
                         .IsRequired()
                         .HasColumnType("text");
@@ -80,6 +84,10 @@ namespace netflix_clone.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("VideoUrl")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -128,9 +136,6 @@ namespace netflix_clone.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("ExpirationDate")
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
 
@@ -178,19 +183,8 @@ namespace netflix_clone.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("PaymentMethod")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("SubscriptionType")
                         .IsRequired()
@@ -201,8 +195,7 @@ namespace netflix_clone.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Subscriptions");
                 });
@@ -219,10 +212,6 @@ namespace netflix_clone.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -315,7 +304,7 @@ namespace netflix_clone.Migrations
             modelBuilder.Entity("netflix_clone.Models.PaymentMethod", b =>
                 {
                     b.HasOne("netflix_clone.Models.User", "User")
-                        .WithMany("PaymentMethods")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -326,7 +315,7 @@ namespace netflix_clone.Migrations
             modelBuilder.Entity("netflix_clone.Models.Profile", b =>
                 {
                     b.HasOne("netflix_clone.Models.User", "User")
-                        .WithMany("Profiles")
+                        .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -337,8 +326,8 @@ namespace netflix_clone.Migrations
             modelBuilder.Entity("netflix_clone.Models.Subscription", b =>
                 {
                     b.HasOne("netflix_clone.Models.User", "User")
-                        .WithOne("Subscription")
-                        .HasForeignKey("netflix_clone.Models.Subscription", "UserId")
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -390,16 +379,6 @@ namespace netflix_clone.Migrations
             modelBuilder.Entity("netflix_clone.Models.Profile", b =>
                 {
                     b.Navigation("Watchlists");
-                });
-
-            modelBuilder.Entity("netflix_clone.Models.User", b =>
-                {
-                    b.Navigation("PaymentMethods");
-
-                    b.Navigation("Profiles");
-
-                    b.Navigation("Subscription")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("netflix_clone.Models.WatchList", b =>

@@ -17,8 +17,36 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/dark.png",
+      "PackagePath": "staticwebassets/images/dark.png"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/dark1.png",
+      "PackagePath": "staticwebassets/images/dark1.png"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/lastkingdom.png",
+      "PackagePath": "staticwebassets/images/lastkingdom.png"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/lucifer.png",
+      "PackagePath": "staticwebassets/images/lucifer.png"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/moneyheist.png",
+      "PackagePath": "staticwebassets/images/moneyheist.png"
+    },
+    {
       "Id": "/Users/apple/netflix-clone/wwwroot/images/poster-background.png",
       "PackagePath": "staticwebassets/images/poster-background.png"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/snow.png",
+      "PackagePath": "staticwebassets/images/snow.png"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/universe.png",
+      "PackagePath": "staticwebassets/images/universe.png"
     },
     {
       "Id": "/Users/apple/netflix-clone/wwwroot/js/site.js",
@@ -253,8 +281,128 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/Users/apple/netflix-clone/wwwroot/previewvideos/dark.mp4",
+      "PackagePath": "staticwebassets/previewvideos/dark.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/previewvideos/lastkingdom.mp4",
+      "PackagePath": "staticwebassets/previewvideos/lastkingdom.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/previewvideos/lucifer.mp4",
+      "PackagePath": "staticwebassets/previewvideos/lucifer.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/previewvideos/moneyheist.mp4",
+      "PackagePath": "staticwebassets/previewvideos/moneyheist.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/previewvideos/snow.mp4",
+      "PackagePath": "staticwebassets/previewvideos/snow.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/previewvideos/universe.mp4",
+      "PackagePath": "staticwebassets/previewvideos/universe.mp4"
+    },
+    {
       "Id": "/Users/apple/netflix-clone/wwwroot/swagger/swagger.json",
       "PackagePath": "staticwebassets/swagger/swagger.json"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/dark.mp4",
+      "PackagePath": "staticwebassets/videos/dark.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lastkingdom/output.m3u8",
+      "PackagePath": "staticwebassets/videos/hls/lastkingdom/output.m3u8"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lastkingdom/output0.ts",
+      "PackagePath": "staticwebassets/videos/hls/lastkingdom/output0.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/moneyheist/output.m3u8",
+      "PackagePath": "staticwebassets/videos/hls/moneyheist/output.m3u8"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/moneyheist/output0.ts",
+      "PackagePath": "staticwebassets/videos/hls/moneyheist/output0.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/moneyheist/output1.ts",
+      "PackagePath": "staticwebassets/videos/hls/moneyheist/output1.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/moneyheist/output2.ts",
+      "PackagePath": "staticwebassets/videos/hls/moneyheist/output2.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output.m3u8",
+      "PackagePath": "staticwebassets/videos/hls/snow/output.m3u8"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output0.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output0.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output1.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output1.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output10.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output10.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output2.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output2.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output3.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output3.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output4.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output4.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output5.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output5.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output6.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output6.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output7.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output7.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output8.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output8.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/snow/output9.ts",
+      "PackagePath": "staticwebassets/videos/hls/snow/output9.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/lastkingdom.mp4",
+      "PackagePath": "staticwebassets/videos/lastkingdom.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/lucifer.mp4",
+      "PackagePath": "staticwebassets/videos/lucifer.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/moneyheist.mp4",
+      "PackagePath": "staticwebassets/videos/moneyheist.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/snow.mp4",
+      "PackagePath": "staticwebassets/videos/snow.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/universe.mp4",
+      "PackagePath": "staticwebassets/videos/universe.mp4"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.netflix-clone.props",

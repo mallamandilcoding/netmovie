@@ -2,7 +2,7 @@ namespace netflix_clone.Models
 {
     public class Movie
     {
-       public int Id { get; set; }
+        public int Id { get; set; }
         public int GenreId { get; set; }  // Foreign Key to Genre
         public string Title { get; set; }
         public string Description { get; set; }
@@ -12,7 +12,9 @@ namespace netflix_clone.Models
         public string Director { get; set; }
         public string Cast { get; set; }
         public string Language { get; set; }
-        public string AgeRating { get; set; } 
+        public string AgeRating { get; set; }
+        public string ImageUrl { get; set; }  // URL or path to the image
+        public string VideoUrl { get; set; }      // URL or path to the video file
         // One-to-many relationship with MovieFeatures
         public ICollection<MoviesFeatures> MoviesFeatures { get; set; }
 

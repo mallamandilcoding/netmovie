@@ -1,0 +1,64 @@
+@{
+    ViewData["Title"] = "Movie";
+    Layout = null; // Disables the layout for this page
+}
+@* @model IEnumerable<netflix_clone.Models.Movie> *@
+@* Welcome, @ViewBag.Email!
+<form method="post" action="@Url.Action("Logout", "User")">
+    <button class="btn btn-danger" type="submit">Logout</button>
+</form> *@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Movies</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+
+        <div class="left-menu">
+            <div class="logo">
+                <a href=""> NetMovie</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tv Shows</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">News&Popular</a></li>
+                <li><a href="#">Mylist</a></li>
+            </ul>
+        </div>
+        <div class="right-menu">
+            <div class="searchbar">
+                <form class="form-inline" asp-action="index" asp-controller="Movie">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                        name="searchQuery" value="@ViewBag.SearchQuery">
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+            </div>
+
+            <a href="#" class="notification"><i class="fa-regular fa-bell fa-2x"></i></a>
+            <form method="post" action="@Url.Action("Logout", "User")">
+                <button class="btn btn-danger" type="submit"><i class="fa-solid fa-right-from-bracket"></i></button>
+            </form>
+
+        </div>
+    </nav>
+    <div class="content-change">
+        @RenderBody()
+    </div>
+    <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
+</body>
+
+</html>

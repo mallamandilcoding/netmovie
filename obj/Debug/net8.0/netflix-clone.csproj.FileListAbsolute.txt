@@ -113,3 +113,4 @@
 /Users/apple/netflix-clone/bin/Debug/net8.0/frontend/package.json
 /Users/apple/netflix-clone/bin/Debug/net8.0/netflix-clone.xml
 /Users/apple/netflix-clone/obj/Debug/net8.0/netflix-clone.xml
+/Users/apple/netflix-clone/obj/Debug/net8.0/netflix-clone.sourcelink.json
