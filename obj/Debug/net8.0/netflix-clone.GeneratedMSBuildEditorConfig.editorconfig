@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvU3RyZWFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/apple/netflix-clone/Views/Movie/VideoTry.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTW92aWUvVmlkZW9UcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/apple/netflix-clone/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

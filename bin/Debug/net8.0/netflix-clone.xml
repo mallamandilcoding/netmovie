@@ -124,5 +124,29 @@
         <member name="M:netflix_clone.Migrations.imagevideourlfieldaddedtomoviemodel.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
+        <member name="T:netflix_clone.Migrations.watchlistmovieschanges">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.watchlistmovieschanges.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.watchlistmovieschanges.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.watchlistmovieschanges.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:netflix_clone.Migrations.watchlistmovieschanges1">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.watchlistmovieschanges1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.watchlistmovieschanges1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:netflix_clone.Migrations.watchlistmovieschanges1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

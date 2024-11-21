@@ -267,14 +267,19 @@ namespace netflix_clone.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("WatchlistId")
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int?>("WatchListId")
                         .HasColumnType("integer");
 
                     b.HasKey("WatchlistMovieId");
 
                     b.HasIndex("MovieId");
 
-                    b.HasIndex("WatchlistId");
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("WatchListId");
 
                     b.ToTable("WatchlistMovies");
                 });
@@ -353,15 +358,19 @@ namespace netflix_clone.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("netflix_clone.Models.WatchList", "WatchList")
+                    b.HasOne("netflix_clone.Models.User", "User")
                         .WithMany("WatchListMovies")
-                        .HasForeignKey("WatchlistId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("netflix_clone.Models.WatchList", null)
+                        .WithMany("WatchListMovies")
+                        .HasForeignKey("WatchListId");
+
                     b.Navigation("Movie");
 
-                    b.Navigation("WatchList");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("netflix_clone.Models.Genre", b =>
@@ -379,6 +388,11 @@ namespace netflix_clone.Migrations
             modelBuilder.Entity("netflix_clone.Models.Profile", b =>
                 {
                     b.Navigation("Watchlists");
+                });
+
+            modelBuilder.Entity("netflix_clone.Models.User", b =>
+                {
+                    b.Navigation("WatchListMovies");
                 });
 
             modelBuilder.Entity("netflix_clone.Models.WatchList", b =>

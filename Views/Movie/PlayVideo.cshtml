@@ -1,7 +1,6 @@
 @{
     ViewData["Title"] = "Video Player";
     Layout = null;
-    @* var videoUrl = ViewData["VideoUrl"] as string; // Get the video URL from the controller *@
     var videourl = ViewData["VideoUrl"] as string; // Get the video URL from the controller
 
 
@@ -11,26 +10,49 @@
 
 <head>
     <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css">
 
 </head>
 
 <body>
-    <h2>@ViewData["Title"]</h2>
-
     <!-- Video.js Player -->
-    <video id="video-player" class="video-js vjs-default-skin" controls>
-        <!-- Dynamically set the video source based on the controller parameter -->
-        @* <source src="@Url.Action("Stream", "Movie", new { videourl = videourl })" type="application/x-mpegURL"> *@
-        <source src="@videourl" type="application/x-mpegURL">
+    <!-- Video.js Player -->
+    <div class="video-wrapper">
+        <video id="video-player" class="video-js vjs-default-skin" controls>
+            <source src="/videos/hls/lastkingdom/output.m3u8" type="application/x-mpegURL">
+        </video>
+    </div>
+    <button class="close-button" onclick="closeVideo()">✖</button>
 
-    </video>
 
 
     <script src="https://vjs.zencdn.net/8.16.1/video.min.js"></script>
     <script>
         // Initialize the Video.js player
         var player = videojs('video-player', {
-            techOrder: ['html5']
+            techOrder: ['html5'],
+            width: window.innerWidth,  // Set the width to the browser's width
+            height: window.innerHeight,
+            autoplay: true,    // Automatically start the video
+            controls: true,
+
+        });
+
+        // Function to close the video or navigate back when the close button is clicked
+        function closeVideo() {
+            @* player.pause(); // Pause the video *@
+                window.history.back(); // Navigate back to the previous page
+        }
+
+        document.addEventListener('contextmenu', event => event.preventDefault()); // Disable right-click
+
+        document.addEventListener('keydown', (event) => {
+            // Disable F12 and Ctrl+Shift+I
+            if (event.key === "F12" || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+                event.preventDefault();
+            }
         });
     </script>
+
+
 </body>

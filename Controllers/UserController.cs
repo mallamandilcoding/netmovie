@@ -49,7 +49,10 @@ namespace netflix_clone.Controllers
             {
                 // Set session and cookie if authentication is successful
                 HttpContext.Session.SetString("Email", email);
-                Response.Cookies.Append("Email", email, new CookieOptions
+                HttpContext.Session.SetString("UserId", user.Id.ToString());
+
+                var cookieValue = $"{email}|{user.Id}";
+                Response.Cookies.Append("UserInfo", cookieValue, new CookieOptions
                 {
                     Expires = DateTimeOffset.UtcNow.AddMinutes(30),
                     HttpOnly = true,
