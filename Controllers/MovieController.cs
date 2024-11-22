@@ -108,7 +108,7 @@ namespace netflix_clone.Controllers
                 var startInfo = new ProcessStartInfo
                 {
                     FileName = "ffmpeg",
-                    Arguments = $"-i \"{videoPath}\" -f hls -hls_time 2 -hls_list_size 0 -g 1 -c:v libx264 -c:a aac -preset veryfast \"{m3u8FilePath}\"",
+                    Arguments = $"-i \"{videoPath}\" -f hls -hls_time 60 -hls_list_size 0 -g 1 -c:v libx264 -c:a aac -preset veryfast \"{m3u8FilePath}\"",
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
                     UseShellExecute = false,

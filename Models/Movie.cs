@@ -15,12 +15,10 @@ namespace netflix_clone.Models
         public string AgeRating { get; set; }
         public string ImageUrl { get; set; }  // URL or path to the image
         public string VideoUrl { get; set; }      // URL or path to the video file
-        // One-to-many relationship with MovieFeatures
-        public ICollection<MoviesFeatures> MoviesFeatures { get; set; }
 
-        // Many-to-many relationship with WatchlistMovie
-        public ICollection<WatchListMovie> WatchlistMovies { get; set; }
 
+
+        public ICollection<WatchList> WatchList { get; set; }
         // Navigation Property to Genre
         public Genre Genre { get; set; }
     }

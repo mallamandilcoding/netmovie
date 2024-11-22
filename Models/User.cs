@@ -16,8 +16,8 @@ namespace netflix_clone.Models
         // One-to-one relationship with Subscription
         public Subscription Subscription { get; set; }
 
-        // One-to-many relationship
-        public ICollection<WatchListMovie> WatchListMovies { get; set; }
+
+        public WatchList WatchList { get; set; }
 
     }
 }

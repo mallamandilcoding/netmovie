@@ -27,14 +27,15 @@
 
         <div class="left-menu">
             <div class="logo">
-                <a href=""> NetMovie</a>
+                <a href="@Url.Action("Index", "Movie")"> NetMovie</a>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
+                @* <li><a href="@Url.Action("Index", "WatchList")">Home</a></li> *@
                 <li><a href="#">Tv Shows</a></li>
-                <li><a href="#">Movies</a></li>
+                <li><a href="@Url.Action("Index", "Movie")">Movies</a></li>
                 <li><a href="#">News&Popular</a></li>
-                <li><a href="#">Mylist</a></li>
+                <li><a href="@Url.Action("Index", "WatchList")">Mylist</a></li>
+
             </ul>
         </div>
         <div class="right-menu">

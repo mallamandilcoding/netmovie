@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_MovieNavigationbar.cshtml";
+}
+
+@* @model IEnumerable<netflix_clone.Models.WatchList> *@
+@* @model IEnumerable<netflix_clone.Models.Movie> *@
+@model IEnumerable<dynamic>
+
+
+@if (!Model.Any())
+{
+    <p>No movies found in the watchlist.</p>
+}
+else
+{
+    <h2 class="mb-0 pl-2" style="color: #e50a15;background-color: black;padding-left: 31px;padding-top: 20px;">Mylist</h2>
+    <div class="movielist">
+
+    @foreach (var movie in Model)
+        {
+            <div class="movie-card">
+
+                <a href="@Url.Action("Details", "Movie", new { id = movie.MovieId})">
+                    <img src="@movie.MovieImageUrl" alt="@movie.MovieTitle" />
+                </a>
+
+            </div>
+
+        }
+    </div>
+}

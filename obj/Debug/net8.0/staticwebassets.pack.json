@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets/images/snow.png"
     },
     {
+      "Id": "/Users/apple/netflix-clone/wwwroot/images/spongebob.png",
+      "PackagePath": "staticwebassets/images/spongebob.png"
+    },
+    {
       "Id": "/Users/apple/netflix-clone/wwwroot/images/universe.png",
       "PackagePath": "staticwebassets/images/universe.png"
     },
@@ -313,6 +317,26 @@
       "PackagePath": "staticwebassets/videos/dark.mp4"
     },
     {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/dark/output.m3u8",
+      "PackagePath": "staticwebassets/videos/hls/dark/output.m3u8"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/dark/output0.ts",
+      "PackagePath": "staticwebassets/videos/hls/dark/output0.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/dark/output1.ts",
+      "PackagePath": "staticwebassets/videos/hls/dark/output1.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/dark/output2.ts",
+      "PackagePath": "staticwebassets/videos/hls/dark/output2.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/dark/output3.ts",
+      "PackagePath": "staticwebassets/videos/hls/dark/output3.ts"
+    },
+    {
       "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lastkingdom/output.m3u8",
       "PackagePath": "staticwebassets/videos/hls/lastkingdom/output.m3u8"
     },
@@ -327,6 +351,30 @@
     {
       "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lastkingdom/output2.ts",
       "PackagePath": "staticwebassets/videos/hls/lastkingdom/output2.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lucifer/output.m3u8",
+      "PackagePath": "staticwebassets/videos/hls/lucifer/output.m3u8"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lucifer/output0.ts",
+      "PackagePath": "staticwebassets/videos/hls/lucifer/output0.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lucifer/output1.ts",
+      "PackagePath": "staticwebassets/videos/hls/lucifer/output1.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lucifer/output2.ts",
+      "PackagePath": "staticwebassets/videos/hls/lucifer/output2.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lucifer/output3.ts",
+      "PackagePath": "staticwebassets/videos/hls/lucifer/output3.ts"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/lucifer/output4.ts",
+      "PackagePath": "staticwebassets/videos/hls/lucifer/output4.ts"
     },
     {
       "Id": "/Users/apple/netflix-clone/wwwroot/videos/hls/moneyheist/output.m3u8",
@@ -387,6 +435,10 @@
     {
       "Id": "/Users/apple/netflix-clone/wwwroot/videos/snow.mp4",
       "PackagePath": "staticwebassets/videos/snow.mp4"
+    },
+    {
+      "Id": "/Users/apple/netflix-clone/wwwroot/videos/spongebob.mp4",
+      "PackagePath": "staticwebassets/videos/spongebob.mp4"
     },
     {
       "Id": "/Users/apple/netflix-clone/wwwroot/videos/universe.mp4",

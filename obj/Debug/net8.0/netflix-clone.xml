@@ -4,148 +4,16 @@
         <name>netflix-clone</name>
     </assembly>
     <members>
-        <member name="T:netflix_clone.Migrations.CreateUserTable">
+        <member name="T:netflix_clone.Migrations.initial">
             <inheritdoc />
         </member>
-        <member name="M:netflix_clone.Migrations.CreateUserTable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:netflix_clone.Migrations.initial.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:netflix_clone.Migrations.CreateUserTable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+        <member name="M:netflix_clone.Migrations.initial.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
             <inheritdoc />
         </member>
-        <member name="M:netflix_clone.Migrations.CreateUserTable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.UserTableUpdateRelation">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.UserTableUpdateRelation.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.UserTableUpdateRelation.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.UserTableUpdateRelation.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.DatabaseTables">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.DatabaseTables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.DatabaseTables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.DatabaseTables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.removenamefromusermodel">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removenamefromusermodel.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removenamefromusermodel.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removenamefromusermodel.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.removeexpirationdatefrompaymentmodel">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removeexpirationdatefrompaymentmodel.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removeexpirationdatefrompaymentmodel.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removeexpirationdatefrompaymentmodel.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel1">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removepaymentmethodfiledfromsubscriptionmodel1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel1">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.removemultiplefiledfromsubscriptionmodel1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.imagevideourlfieldaddedtomoviemodel">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.imagevideourlfieldaddedtomoviemodel.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.imagevideourlfieldaddedtomoviemodel.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.imagevideourlfieldaddedtomoviemodel.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.watchlistmovieschanges">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.watchlistmovieschanges.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.watchlistmovieschanges.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.watchlistmovieschanges.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="T:netflix_clone.Migrations.watchlistmovieschanges1">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.watchlistmovieschanges1.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.watchlistmovieschanges1.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
-            <inheritdoc />
-        </member>
-        <member name="M:netflix_clone.Migrations.watchlistmovieschanges1.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+        <member name="M:netflix_clone.Migrations.initial.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

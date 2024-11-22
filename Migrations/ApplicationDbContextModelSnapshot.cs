@@ -22,6 +22,21 @@ namespace netflix_clone.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("MovieWatchList", b =>
+                {
+                    b.Property<int>("MoviesId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("WatchListId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("MoviesId", "WatchListId");
+
+                    b.HasIndex("WatchListId");
+
+                    b.ToTable("MovieWatchList");
+                });
+
             modelBuilder.Entity("netflix_clone.Models.Genre", b =>
                 {
                     b.Property<int>("GenreId")
@@ -162,7 +177,7 @@ namespace netflix_clone.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
@@ -195,7 +210,8 @@ namespace netflix_clone.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
                     b.ToTable("Subscriptions");
                 });
@@ -235,31 +251,6 @@ namespace netflix_clone.Migrations
                     b.Property<DateTime>("AddedAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("ProfileId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProfileId");
-
-                    b.ToTable("Watchlists");
-                });
-
-            modelBuilder.Entity("netflix_clone.Models.WatchListMovie", b =>
-                {
-                    b.Property<int>("WatchlistMovieId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("WatchlistMovieId"));
-
-                    b.Property<DateTime>("AddedAt")
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<int>("MovieId")
                         .HasColumnType("integer");
 
@@ -270,18 +261,27 @@ namespace netflix_clone.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("WatchListId")
-                        .HasColumnType("integer");
+                    b.HasKey("Id");
 
-                    b.HasKey("WatchlistMovieId");
+                    b.HasIndex("UserId")
+                        .IsUnique();
 
-                    b.HasIndex("MovieId");
+                    b.ToTable("Watchlists");
+                });
 
-                    b.HasIndex("UserId");
+            modelBuilder.Entity("MovieWatchList", b =>
+                {
+                    b.HasOne("netflix_clone.Models.Movie", null)
+                        .WithMany()
+                        .HasForeignKey("MoviesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasIndex("WatchListId");
-
-                    b.ToTable("WatchlistMovies");
+                    b.HasOne("netflix_clone.Models.WatchList", null)
+                        .WithMany()
+                        .HasForeignKey("WatchListId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("netflix_clone.Models.Movie", b =>
@@ -298,7 +298,7 @@ namespace netflix_clone.Migrations
             modelBuilder.Entity("netflix_clone.Models.MoviesFeatures", b =>
                 {
                     b.HasOne("netflix_clone.Models.Movie", "Movie")
-                        .WithMany("MoviesFeatures")
+                        .WithMany()
                         .HasForeignKey("MovieId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -309,7 +309,7 @@ namespace netflix_clone.Migrations
             modelBuilder.Entity("netflix_clone.Models.PaymentMethod", b =>
                 {
                     b.HasOne("netflix_clone.Models.User", "User")
-                        .WithMany()
+                        .WithMany("PaymentMethods")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -319,20 +319,16 @@ namespace netflix_clone.Migrations
 
             modelBuilder.Entity("netflix_clone.Models.Profile", b =>
                 {
-                    b.HasOne("netflix_clone.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
+                    b.HasOne("netflix_clone.Models.User", null)
+                        .WithMany("Profiles")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("netflix_clone.Models.Subscription", b =>
                 {
                     b.HasOne("netflix_clone.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
+                        .WithOne("Subscription")
+                        .HasForeignKey("netflix_clone.Models.Subscription", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -341,34 +337,11 @@ namespace netflix_clone.Migrations
 
             modelBuilder.Entity("netflix_clone.Models.WatchList", b =>
                 {
-                    b.HasOne("netflix_clone.Models.Profile", "Profile")
-                        .WithMany("Watchlists")
-                        .HasForeignKey("ProfileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Profile");
-                });
-
-            modelBuilder.Entity("netflix_clone.Models.WatchListMovie", b =>
-                {
-                    b.HasOne("netflix_clone.Models.Movie", "Movie")
-                        .WithMany("WatchlistMovies")
-                        .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("netflix_clone.Models.User", "User")
-                        .WithMany("WatchListMovies")
-                        .HasForeignKey("UserId")
+                        .WithOne("WatchList")
+                        .HasForeignKey("netflix_clone.Models.WatchList", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("netflix_clone.Models.WatchList", null)
-                        .WithMany("WatchListMovies")
-                        .HasForeignKey("WatchListId");
-
-                    b.Navigation("Movie");
 
                     b.Navigation("User");
                 });
@@ -378,26 +351,17 @@ namespace netflix_clone.Migrations
                     b.Navigation("Movies");
                 });
 
-            modelBuilder.Entity("netflix_clone.Models.Movie", b =>
-                {
-                    b.Navigation("MoviesFeatures");
-
-                    b.Navigation("WatchlistMovies");
-                });
-
-            modelBuilder.Entity("netflix_clone.Models.Profile", b =>
-                {
-                    b.Navigation("Watchlists");
-                });
-
             modelBuilder.Entity("netflix_clone.Models.User", b =>
                 {
-                    b.Navigation("WatchListMovies");
-                });
+                    b.Navigation("PaymentMethods");
 
-            modelBuilder.Entity("netflix_clone.Models.WatchList", b =>
-                {
-                    b.Navigation("WatchListMovies");
+                    b.Navigation("Profiles");
+
+                    b.Navigation("Subscription")
+                        .IsRequired();
+
+                    b.Navigation("WatchList")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }
